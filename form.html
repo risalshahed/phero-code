@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="styles/nav.css">
+  <style>
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="https://risalshahed.com" target="_blank">About</a></li>
+        <li><a href="audio-video.html">Media</a></li>
+        <li><a href="semantic.html">Semantic</a></li>
+        <li><a href="form.html">Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <form>
+
+    <p>
+      <input type="text" name="name" placeholder="Enter your name">
+    </p>
+    <p>
+      <input type="email" name="email" placeholder="Enter your Email">
+    </p>
+
+    <fieldset>
+
+      <legend>
+        OS Type
+      </legend>
+
+      <!-- *** radio & checkbox button a shobgular "name" SAME hoite hbe -->
+      <p>
+        <input type="radio" name="os" id="windows">
+        <label for="windows">Windows 10</label>
+      </p>
+      <p>
+        <input type="radio" name="os" id="linux">
+        <label for="linux">Linux</label>
+      </p>
+      <p>
+        <input type="radio" name="os" id="mac">
+        <label for="mac">MAC</label>
+      </p>
+
+    </fieldset>
+
+    <fieldset>
+
+      <legend>
+        Brower Selection
+      </legend>
+
+      <!-- *** radio & checkbox button a shobgular "name" SAME hoite hbe -->
+      <p>
+        <input type="checkbox" name="brs" id="chrome">
+        <label for="chrome">Google Chrome</label>
+      </p>
+      <p>
+        <input type="checkbox" name="brs" id="mozilla">
+        <label for="mozilla">Mozilla Firefox</label>
+      </p>
+      <p>
+        <input type="checkbox" name="brs" id="tor">
+        <label for="tor">Tor Browser</label>
+      </p>
+
+    </fieldset>
+
+    <br><br><br>
+
+    <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+    <textarea name="rs" id="tx" rows="10"></textarea>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+  </form>
+  
+</body>
+</html>

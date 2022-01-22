@@ -1,0 +1,48 @@
+nav ul {
+  background-color: #222;
+  list-style: none;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: right;
+}
+
+nav li {
+  padding: 20px 10px;
+  margin-right: 30px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #eee;
+  padding: 15px;
+}
+
+nav li a:hover {
+  background-color: green;
+  color: red;
+}
+
+#nest {
+  color: #eee;
+}
+
+.dropdown {
+  display: none;
+  position: absolute; /* V.V.I. */
+  background: #fff;
+  padding: 0;
+}
+
+nav > ul > li:hover > ul {
+  display: block;
+}
+
+nav > ul > li:hover > ul a {
+  color: #000;
+}
+
+nav > ul > li:hover > ul a:hover {
+  color: red;
+}
