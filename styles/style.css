@@ -1,0 +1,391 @@
+/*  
+-------------------------
+import fonts
+-------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Tinos&display=swap');
+
+/* 
+-------------------------
+styles for whole body
+-------------------------
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Tinos', serif;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+/* 
+-------------------------
+styles for header
+-------------------------
+*/
+
+header {
+  padding: 30px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav li {
+  display: inline;
+  list-style: none;
+  margin-right: 20px;
+}
+
+header nav li a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* 
+-------------------------
+main content's styles
+-------------------------
+*/
+main {
+  padding: 30px 7%;
+}
+
+section {
+  margin-bottom: 7rem;
+}
+
+/* 
+-------------------------
+Top Section's styles
+-------------------------
+*/
+
+.top-section {
+  display: flex;
+  align-items: center;
+}
+
+.top-section > div {
+  flex-basis: 100%;
+  margin-right: 2%;
+}
+
+.top-section h1 {
+  font-size: 52px;
+}
+
+.top-section p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  margin-right: 20%;
+}
+
+.top-section a {
+  text-decoration: none;
+  background-color: #E02C6D;
+  color: #fff;
+  padding: 10px 24px;
+  font-weight: 700;
+  border-radius: 41px;
+}
+
+#main-camera {
+  transition: transform 2s linear, scale 2s linear;
+}
+
+.main-cam-div:hover #main-camera {
+  transform: rotate(35deg) scale(1.1, 1.1);
+}
+
+/* 
+-------------------------
+Logo Section's styles
+-------------------------
+*/
+
+.logos {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* 
+----------------------------
+Collection Section's styles
+----------------------------
+*/
+
+.collection-section h2 {
+  text-align: center;
+}
+
+.collections {
+  width: 80%;
+  display: grid;
+  margin: 40px auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.each-collection {
+  box-shadow: 5px 8px 25px #ccc;
+  border-radius: 15px;
+  padding: 18px 5%;
+}
+
+.each-collection img {
+  width: 100%;
+}
+
+.each-collection h3 {
+  font-size: 1.5em;
+}
+
+.price-texts {
+  font-size: 1.5em;
+}
+
+.review-div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 14px;
+}
+
+.review-div i {
+  color: #FB8200;
+}
+
+.review-div span {
+  color: #5e6366;
+  margin-left: 3%;
+}
+
+.product-description {
+  color: #787885;
+}
+
+#see-more {
+  text-align: right;
+  font-size: 1.5em;
+  margin: 40px 10%;
+}
+
+#see-more a {
+  text-decoration: none;
+  color: #E02C6D;
+}
+
+/* 
+----------------------------------------
+Customized Products Section's styles
+----------------------------------------
+*/
+.customized-product-section {
+  display: flex;
+  align-items: center;
+}
+
+.customized-products-div {
+  flex-basis: 100%;
+}
+
+.customized-products-div h1 {
+  font-size: 40px;
+}
+
+.customized-products-div p {
+  padding-right: 5%;
+  margin-bottom: 30px;
+}
+
+.customized-products-div a {
+  text-decoration: none;
+  background-color: #E02C6D;
+  color: #fff;
+  padding: 10px 24px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.customized-products-div img {
+  border-radius: 8px;
+  margin: 0 25%;
+}
+
+/* 
+-------------------------
+Footer's styles
+-------------------------
+*/
+footer {
+  background-color: #0A0826;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+footer > div {
+  padding: 3rem 0;
+}
+
+footer i {
+  margin-right: 1%;
+}
+
+/* 
+------------------------------
+Responsive for tiny devices
+------------------------------
+*/
+
+/* 
+--------------------
+Tablet View
+--------------------
+*/
+@media (max-width: 992px) {
+
+  /* 
+  -------------------------
+  Top Section's styles
+  -------------------------
+  */
+  .top-section h1 {
+    font-size: 40px;
+  }
+  .top-section p {
+    margin-right: 10%;
+  }
+  #main-camera {
+    width: 90%;
+  }
+
+  /* 
+  ----------------------------
+  Collection Section's styles
+  ----------------------------
+  */
+  .collections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 
+  --------------------------------------
+  Customized Products Section's styles
+  --------------------------------------
+  */
+  .customized-products-div p {
+    padding-right: 2%;
+  }
+  .customized-products-div img {
+    margin: auto 12.5%;
+  }
+
+}
+
+/* 
+--------------------
+Mobile View
+--------------------
+*/
+@media (max-width: 688px) {
+
+  /* 
+  --------------------
+  Header's styles
+  --------------------
+  */
+  header {
+    justify-content: center;
+  }
+  header h2 {
+    text-align: center;
+  }
+  header nav li {
+    display: none;
+  }
+
+  /* 
+  ----------------------
+  Top Section's styles
+  ----------------------
+  */
+  .top-section {
+    /* align-items: center; */
+    flex-direction: column-reverse;
+  }
+  .top-section > div {
+    text-align: center;
+    margin: auto;
+  }
+  .top-section h1 {
+    font-size: 52px;
+  }
+  .top-section p {
+    margin-right: auto;
+  }
+  #main-camera {
+    width: 100%;
+  }
+
+  /* 
+  ------------------------
+  Logo Section's styles
+  -------------------------
+  */
+  .logo-section hr {
+    display: none;
+  }
+  .logos {
+    flex-wrap: wrap;
+    padding: auto;
+    justify-content: space-evenly;
+  }
+
+  /* 
+  -----------------------------
+  Collection Section's styles
+  -----------------------------
+  */
+  .collections {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #see-more {
+    margin: 40px 0;
+  }
+  
+  /* 
+  ------------------------------
+  Customized Products Section
+  ------------------------------
+  */
+  .customized-product-section {
+    flex-direction: column;
+  }
+  .customized-products-div {
+    text-align: center;
+  }
+  .customized-products-div p {
+    padding-right: 0;
+  }
+  .customized-products-div img {
+    width: 100%;
+    margin: auto;
+  }
+
+}
