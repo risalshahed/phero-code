@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pseudo</title>
+  <style>
+    h1 {
+      border: 15px solid lawngreen;
+      outline: indianred solid 10px;
+      width: 20%;
+      margin: 20px auto;
+    }
+    div {
+      background-color: limegreen;
+    }
+    h1 {
+      background-color: lightseagreen;
+    }
+    span {
+      background-color: lawngreen;
+    }
+    a {
+      display: block;
+    }
+    #a:focus {
+      color: red;
+    }
+
+    li:nth-child(2n) {
+      color: red;
+      font-weight: 800;
+      
+    }
+
+    li::before {
+      content: 'Hello ';  /* hello won't be able to be selected in the browser! */
+    }
+
+    li::after {
+      content: ' gelo ga!';
+    }
+
+  </style>
+</head>
+<body>
+  <h1>some text</h1>
+  <span>dkfhdkf</span>
+  <span>what</span>
+  <span>meaningful</span>  
+  <h1>some other text</h1>
+
+  <div>
+    <h2>room-1</h2>
+    <p>pangram_1</p>
+  </div>
+  <div>
+    <h2>room-2</h2>
+    <p>pangram_2</p>
+  </div>
+  <div>
+    <h2>room-3</h2>
+    <p>pangram_3</p>
+  </div>
+
+  <a href="google.com">google</a>
+  <a href="google.com">google</a>
+  <a href="google.com">google</a>
+  <a href="google.com">google</a>
+  <a href="google.com">google</a>
+  <a href="google.com">google</a>
+  <a href="google.com">google</a>
+
+  <input type="text">
+  <input type="text">
+  <input type="text">
+  <input id="a" type="text">
+
+  <ul>
+    <li>item-1</li>
+    <li>item-2</li>
+    <li>item-3</li>
+    <li>item-4</li>
+    <li>item-5</li>
+    <li>item-6</li>
+  </ul>
+
+</body>
+</html>
