@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition</title>
+  <style>
+    .box {
+      width: 400px;
+      height: 300px;
+      border: 2px solid chocolate;
+      background-color: orangered;
+      /* transition: width 3s; */
+      /* linear -> shomo bege cholbe! 2s-> hover er 2s pore chola suru krbe! */
+      /* transition: width 3s linear 2s, height 3s linear 2s; */
+
+      transition: width 1s linear, height 1s linear, transform 1s linear;
+    }
+    .box:hover {
+      width: 600px;
+      height: 450px;
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h3>Transition</h3>
+  </div>
+</body>
+</html>

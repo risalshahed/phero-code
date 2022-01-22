@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+  <style>
+    @keyframes sliding {
+      /* from {
+        background-color: lawngreen;
+        left: 0;
+      }
+      to {
+        background-color: crimson;
+        left: 300px;
+      } */
+
+      0% {
+        background-color: lawngreen;
+        left: 0;
+        top: 0;
+        /* jodi suru te soto rakhte chai */
+        transform: scale(0.5);
+      }
+      25% {
+        background-color: violet;
+        /* left: 125px; */
+        top: 200px;
+      }
+      50% {
+        background-color: orange;
+        /* left: 250px; */
+        top: 400px;
+      }
+      75% {
+        background-color: purple;
+        /* left: 375px; */
+        top: 200px;
+      }
+      100% {
+        background-color: crimson;
+        left: 500px;
+        top: 0;
+      }
+    }
+
+    .stage {
+      width: 600px;
+      height: 500px;
+      background-color: skyblue;
+    }
+
+    .ball {
+      width: 100px;
+      height: 100px;
+      background-color: lawngreen;
+      border-radius: 50%;
+      position: relative;
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      /* animation: sliding 3s ease-in-out 0.2s infinite reverse; */
+      animation: sliding 3s ease-in-out 0.2s infinite alternate;
+      animation-play-state: running;
+    }
+  </style>
+</head>
+<body>
+  <h1>Let's Animate!</h1>
+  <div class="stage">
+    <div class="ball"></div>
+  </div>
+</body>
+</html>

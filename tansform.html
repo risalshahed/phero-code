@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transform</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .container {
+      width: 180px;
+      height: 150px;
+      border: 2px solid skyblue;
+    }
+
+    .container {
+      background-color: slateblue;
+    }
+
+    .inner {
+      background-color: yellow;
+      width: 100px;
+      height: 80px;
+      margin: 35px 40px;
+      padding: 30px;
+      /* transform: scale(2);  /* 2 means DOUBLE */
+      /* transform: scale(1.5);  1.5 means 1.5 TIMES */
+      transform: rotate(30deg); /* By default, it's Z axis, same as below line! */
+      /* transform: rotateZ(90deg); */
+      
+      /* transform: skew(20deg, 10deg); 1st is x-axis, 2nd is y-axis */
+
+      /* transform: translate(60px); */
+
+      /* V.V.I. Multiple transform not allowed, only allowed in SINGLE LINES */
+      /* transform: translate(50px, -30px) scale(1.25) rotate(30deg); */
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Transform CSS</h1>
+  <div class="box container">
+    <div class="inner">box-1</div>
+  </div>
+  <div class="box container">
+    <div class="inner">box-2</div>
+  </div>
+  <div class="box container">
+    <div class="inner">box-3</div>
+  </div>
+</body>
+</html>
