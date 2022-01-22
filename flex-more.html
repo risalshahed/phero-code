@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use of Flex</title>
+  <script src="https://kit.fontawesome.com/b49b46101d.js" crossorigin="anonymous"></script>
+  <style>
+    .login-container {
+      display: flex;
+      justify-content: center;
+    }
+    .login-form {
+      display: flex;
+      flex-direction: column;
+    }
+    input {
+      /* font-size: 130%; */
+      font-size: 1.3em;
+      margin-top: 1rem;
+      padding: 5px;
+      border: 1px solid;
+      border-radius: 5px;
+    }
+    #submit {
+      background-color: orangered;
+      color: #eee;
+      border-radius: 18px;
+      padding: 8px;
+    }
+    nav {
+      font-size: 1.25em;
+      display: flex;
+      justify-content: space-between;
+    }
+    nav a, nav i {
+      text-decoration: none;
+      color: #000;
+      margin-right: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <span>
+        <a href="">Home</a>
+        <a href="">Products</a>
+        <a href="">Services</a>
+        <a href="">Contact</a>
+      </span>
+      <span>
+        <i class="fab fa-apple-pay"></i>
+        <i class="fas fa-chart-line"></i>
+      </span>
+    </nav>
+  </header>
+  <section class="login-container">
+    <form action="" class="login-form">
+      <h2>Login Form</h2>
+      <input type="email" name="email" id="" placeholder="Enter Your Email">
+      <input type="password" name="email" id="" placeholder="Enter Your Password">
+      <input id="submit" type="submit" value="Submit">
+    </form>
+  </section>
+</body>
+</html>

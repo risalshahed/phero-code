@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <style>
+    .grid-container {
+      background-color: royalblue;
+      display: grid;
+      justify-content: center;
+      /* align-items: center; */
+      align-content: center;
+      grid-gap: 40px 50px;
+      width: 80%;
+      height: 450px;
+      padding: 2rem;
+      /* grid-template-columns: auto auto auto; */
+      /* same as above */
+      grid-template-columns: repeat(6,auto);
+    }
+    .grid-cells {
+      background-color: #ddd;
+      text-align: center;
+      padding: 20px 0;
+      /* margin: 1rem; instead, use grid-gpa on parent div */
+    }
+  </style>
+</head>
+<body>
+  <h1>Let's play with Grid!</h1>
+  <div class="grid-container">
+    <div class="grid-cells">CELL 1</div>
+    <div class="grid-cells">CELL 2</div>
+    <div class="grid-cells">CELL 3</div>
+    <div class="grid-cells">CELL 4</div>
+    <div class="grid-cells">CELL 5</div>
+    <div class="grid-cells">CELL 6</div>
+    <div class="grid-cells">CELL 7</div>
+    <div class="grid-cells">CELL 8</div>
+    <div class="grid-cells">CELL 9</div>
+    <div class="grid-cells">CELL 10</div>
+    <div class="grid-cells">CELL 11</div>
+    <div class="grid-cells">CELL 12</div>
+  </div>
+</body>
+</html>

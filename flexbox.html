@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+    .container {
+      height: 400px;
+      display: flex;
+      /* justify-content: center; */
+      align-items: stretch;
+      /* place-items: center; */
+      border: 2px dotted magenta;
+    }
+    .box {
+      width: 200px;
+      /* height: 200px; */
+      font-size: 3em;
+      border: 4px dashed slateblue;
+    }
+    #box-2 {
+      /* V.V.I. */
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Let's create Flex Layouts</h1>
+  <div class="container">
+    <div class="box">BOX-1</div>
+    <div id="box-2" class="box">BOX-2</div>
+    <div class="box">BOX-3</div>
+  </div>
+</body>
+</html>
