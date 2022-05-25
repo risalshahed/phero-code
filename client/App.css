@@ -1,0 +1,16 @@
+.delete-button, .update-button{
+  color: #fff;
+  padding: 8px 12px;
+  margin: 8px 12px;
+  border-radius: 12px;
+}
+
+.delete-button{
+  background-color: red;
+  border: 1px solid red;
+}
+
+.update-button{
+  background-color: blue;
+  border: 1px solid blue;
+}
