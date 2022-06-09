@@ -1,0 +1,16 @@
+.shop {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.cart-container {
+  background: #ffe0b3;
+}
+
+/* Prdouct er parent hoilo Shop; so flex/grid dte hoile Shop.css a dte hbe! */
+.products {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px 5%;
+}
