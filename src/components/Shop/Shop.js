@@ -9,13 +9,13 @@ const Shop = () => {
   const [cart, setCart] = useState([]);
   // see "produtcs.json" in public folder; products is an array, so, initial value of useState is empty array
   useEffect(() => {
-    console.log('products load before fetch')
-    // directly mention the dataFile "produtcs.json" in fetch as it's inside public folder
+    // console.log('products load before fetch')
+    // *** directly mention the dataFile "produtcs.json" in fetch as it's inside public folder ***
     fetch('products.json')
     .then(res => res.json())
     .then(data => {
       setProducts(data);
-      console.log('products loaded');
+      // console.log('products loaded');
     })
   }, []);
 
@@ -23,33 +23,68 @@ const Shop = () => {
     // To solve it, add a ('products') dependency in the following useEffect; tar mane hoilo "products" er value change hoile, useEffect abr call hbe
 
   useEffect(() => {
-    console.log('Local Storage first line', products);
+    // console.log('Local Storage first line', products);
     // Call getStoredCart function exported from fakedb.js file
     const storedCart = getStoredCart();
     // console.log(storedCart);
+    // let's take a new Array so we can insert elements!
+    const savedCart = [];
     // Object er property access krbo with for in
     for(const id in storedCart) {
       const addedProduct = products.find(product => product.id === id);
       if(addedProduct) {
-        // eigula dlei j quanity add hbe, kivabe bujhbo???
-        // Module 48 theke i mean ei project er sbkisu REVISION dle valo hoy; eita Module 49.6 er 10/11 minute prjnto
-        /* const quantity = storedCart[id];
-        addedProduct.quantity = quantity; */
-        console.log(addedProduct);  
-      }
-      
+        // console.log(addedProduct);
+        // *** eigula dlei j quanity add hbe, kivabe bujhbo???
+        const quantity = storedCart[id];
+        addedProduct.quantity = quantity;
+        // new Array nisi, so we can push here
+        savedCart.push(addedProduct);
+      }      
     }
-    console.log('Local Storage finished');
-  }, [products])
+    
+    setCart(savedCart);
+
+    // console.log('Local Storage finished');
+  }, [products]);
+
+  // REVISION
+  /* useEffect(() => {
+    const storedCart = getStoredCart();
+    // console.log(storedCart);
+    const savedCart = [];
+    for(const id in storedCart) {
+      const addedProduct = products.find(product => product.id === id);
+      if(addedProduct) {
+        // console.log(addedProduct);
+        const quanity = storedCart[id];
+        addedProduct.quanity = quanity;
+        savedCart.push(addedProduct);
+      }
+    }
+  }, [products]) */
 
   // *** jei Component a state thakbe, EventHandler o shei Component a thakbe
 
-  const handleAddToCart = (product) => {
-    // console.log(product);
-    const newCart = [...cart, product];
+  const handleAddToCart = (selectedProduct) => {
+    console.log(selectedProduct);
+    let newCart = [];
+    const exists = cart.find(product => product.id === selectedProduct.id);
+    // for selecting a new product
+    if(!exists) {
+      // 1st select a zero dekhay, but it should be 1
+      selectedProduct.quantity = 1;
+      newCart = [...cart, selectedProduct];
+    }
+    // for selecting such a product which already exists
+    else {
+      const rest = cart.filter(product => product.id !== selectedProduct.id);
+      exists.quantity += 1;
+      newCart = [...rest, selectedProduct];
+    }
     setCart(newCart);
+    
     // save data into localStorage
-    addToDb(product.id);
+    addToDb(selectedProduct.id);
   }
 
 

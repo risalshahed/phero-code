@@ -7,9 +7,11 @@ const Cart = ({cart}) => {
   // console.log(cart);
   let totalPrice = 0;
   let shippingCost = 0;
+  let quantity = 0;
   // Array er vitorer Object access krte amra for of nei
   for (const product of cart) {
-    totalPrice += product.price;
+    quantity += product.quantity;
+    totalPrice += product.price * product.quantity;
     shippingCost += product.shipping;
   }
 
@@ -25,7 +27,7 @@ const Cart = ({cart}) => {
   return (
     <div className='cart'>
       <h2>Order Summary</h2>
-      <p>Selected Items: {cart.length}</p>
+      <p>Selected Items: {quantity}</p>
       <p>Total Price: ${totalPrice}</p>
       <p>Total Shipping Charge: ${shippingCost}</p>
       <p>Tax: ${tax}</p>
