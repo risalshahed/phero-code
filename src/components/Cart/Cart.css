@@ -1,0 +1,16 @@
+.cart {
+  text-align: center;
+}
+
+.cart button {
+  background-color: rgb(255, 60, 0);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 2%;
+  margin-left: 1%;
+}
+
+.orange {
+  background-color: orange;
+}

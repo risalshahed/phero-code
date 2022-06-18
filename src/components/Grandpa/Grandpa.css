@@ -1,0 +1,19 @@
+.grandpa {
+  text-align: center;  
+  border: 1px solid blue;
+  height: 100vh;
+}
+.grandpa, .grandpa div {
+  border: 2px solid salmon;
+  margin: 5px 10px;
+  padding: 5px;
+  border-radius: 8px;
+}
+.grandpa > h4, h5 {
+  margin: 8px auto;
+}
+.grandpa > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

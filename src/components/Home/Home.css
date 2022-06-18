@@ -1,0 +1,10 @@
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 1%
+}
+.tshirt-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
